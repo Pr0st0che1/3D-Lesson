@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class movingForward : MonoBehaviour
 {
-    [SerializeField] private Vector3 _movementDirection;
+    [SerializeField] private float _speed = 0.01f;
 
     private void Update()
     {
-        transform.position += _movementDirection;
+        transform.position += transform.forward * _speed;
     }
 }
